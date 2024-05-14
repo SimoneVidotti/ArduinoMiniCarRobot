@@ -4,9 +4,11 @@ Servo ServoR;
 Servo ServoL;
 
 void Avanti() {
+  //ServoR.write(); 
+  //ServoL.write(0);
   // Impostazione posizione minima servo-motori
-  ServoR.writeMicroseconds(1100); 
-  ServoL.writeMicroseconds(1100);
+  ServoR.writeMicroseconds(1500); 
+  ServoL.writeMicroseconds(1700);
   delay(1000); // Attendi 1 secondo
 }
 
@@ -39,22 +41,20 @@ void LeggermenteSinistra() {
 }
 
 void setup() {
-  ServoR.attach(12);
+  //ServoR.attach(12);
   ServoL.attach(13);
 
-  // Imposto i servo-motori al centro
-  ServoR.writeMicroseconds(1500);
-  ServoR.writeMicroseconds(1500);
+  ServoR.writeMicroseconds(1500); 
+  ServoL.writeMicroseconds(1500);
 
 }
 
 void loop() {
   //Inserisci le funzioni da testare all'interno del for. Default -> nulla.
-  for (int timer=0; timer <= 10; timer++) {
-
-    delay(1000);
+  for (int timer=1; timer <= 3; timer++) {
+    Avanti();
   }
   
-  ServoR.detach();
-  ServoL.detach();
+  //ServoR.detach();
+  //ServoL.detach();
 }
