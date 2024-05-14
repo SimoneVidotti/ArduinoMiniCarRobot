@@ -31,7 +31,7 @@ int main() {
 	const string Command = Cmd;
 
 	system(Command.c_str());
-	system("sudo chmod +x /dev/ttyACM0");
+	system("sudo chmod +x /dev/ttyACM0 && sudo chmod a+rw /dev/ttyACM0");
 	cout << endl << "Done." << endl;
 
 	system("sleep 1");
