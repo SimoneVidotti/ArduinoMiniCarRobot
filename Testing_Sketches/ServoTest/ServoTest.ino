@@ -26,7 +26,7 @@ void testC() {
 }
 
 void setup() {
-  ServoX.attach(8);
+  ServoX.attach(13);
   ServoX.writeMicroseconds(1500);
   Serial.begin(9600);
 }

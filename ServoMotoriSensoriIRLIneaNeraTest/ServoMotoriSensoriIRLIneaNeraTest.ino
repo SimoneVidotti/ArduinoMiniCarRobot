@@ -24,21 +24,21 @@ void Lettura() {
 }
 
 void Avanti() {
-  ServoR.writeMicroseconds(1480);
-  ServoL.writeMicroseconds(1520);
+  ServoR.writeMicroseconds(1470);
+  ServoL.writeMicroseconds(1530);
 }
 
 void LeggermenteDestra() {
   ServoR.writeMicroseconds(1500);
   ServoL.writeMicroseconds(1530);
-  delay(650);
+  delay(500);
   Q = 1;
 }
 
 void LeggermenteSinistra() {
   ServoR.writeMicroseconds(1470);
   ServoL.writeMicroseconds(1500);
-  delay(650);
+  delay(500);
   Q = 2;
 }
 
