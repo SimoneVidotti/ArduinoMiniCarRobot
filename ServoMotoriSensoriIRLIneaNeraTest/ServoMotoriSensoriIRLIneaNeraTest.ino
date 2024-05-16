@@ -60,7 +60,7 @@ void Codifica() {
     LeggermenteSinistra();
     Lettura();
   }
-    
+
   while(LetturaL >= Soglia1 && LetturaC < Soglia2 && LetturaR < Soglia1) {
     LeggermenteSinistra();
     Lettura();
@@ -75,7 +75,7 @@ void Codifica() {
     Avanti();
     Lettura();
   }
- 
+
   while(LetturaL < Soglia1 && LetturaC < Soglia2 && LetturaR >= Soglia1) {
     LeggermenteDestra();
     Lettura();
@@ -83,14 +83,14 @@ void Codifica() {
 
   if (LetturaL >= Soglia1 && LetturaC >= Soglia2 && LetturaR >= Soglia1) {
     Stop();
-  } 
-  
+  }
+
   if (LetturaL < Soglia1 && LetturaC < Soglia2 && LetturaR < Soglia1) {
     if (Q == 0) {
       ServoR.writeMicroseconds(1500);
       ServoL.writeMicroseconds(1500);
-    } 
-  } 
+    }
+  }
 
   //Default
   ServoR.writeMicroseconds(DefaultR);
